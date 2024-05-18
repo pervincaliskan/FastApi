@@ -3,7 +3,8 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/") # path operation decorator
+@app.get("/", description= "This is our first route") # path operation decorator
+# @app.get("/", description= "This is our first route", deprecated=True ) -> we can say deprecated(kullanımdan kaldırıldığını) equals true
 async def root(): #root route
     return {"message": "hello world"}
 
